@@ -228,6 +228,9 @@ entity_picture: >-
 Créer une carte manuelle sur le tableau de ton choix.
 Ici aussi tu fais attention… Tu écris bien ce qu’on te dit. 
 Regarde la prochaine capture si tu doutes…
+
+
+
 ````yaml 
 type: 'custom:xiaomi-vacuum-map-card'
 entity: vacuum.xiaomi_vacuum_cleaner #nom de ton entité aspirateur « vacuum.xxxx »
@@ -267,6 +270,9 @@ Les coordonnées sont toujours un ensemble de 4 nombres, correspondant à ces c�
 
 #### Les différentes solutions de récupération des coordonnées :
 1. Utilisation des coordonnées des Rooms : tu retournes dans outil DEV, et l’entité de ta camera.aspixxx et tu cherches les coordonnées notées sous « rooms » (ce sont les pièces créées dans l’app Xiaomi).
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/coordonnees.jpg)
+
 Tu copies chaque série de 4 nombres pour une zone sous la forme qu’on a indiquée dans la carte…
 > REMARQUE : on a vu que parfois ces coordonnées n’étaient pas des plus exactes…
 2. Utilisation des zones : tu cliques sur ta jolie nouvelle carte, « mode / nettoyage de zones »
