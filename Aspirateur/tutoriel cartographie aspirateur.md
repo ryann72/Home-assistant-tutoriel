@@ -281,6 +281,7 @@ Tutoriel cartographie aspirateur Xiaomi
 Tu cliques sur « démarrage », une popup apparaît !
 Tu copies chaque nombre sous la forme indiquée. (Le dernier chiffre isolé ne te servira pas ici…)
 « Exemple d’affichage de la pop-up pour la zone sélectionnée »
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/debug.jpg)
 
 
@@ -289,9 +290,11 @@ Tu copies chaque nombre sous la forme indiquée. (Le dernier chiffre isolé ne t
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple-zone.jpg)
 4. Tu peux maintenant changer la valeur de « debug » par « false » quand tu as fini.
 Voici le résultat avec les différentes zones 
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple1.jpg)
 
 et ici avec deux zones sélectionnées (verte)
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple2.jpg)
 
 ## Automation ou script pour nettoyage par pièce ou zone.
@@ -302,7 +305,7 @@ Pour réaliser une automation ou un script permettant le nettoyage d’une zone 
 ```` yaml
 service: xiaomi_miio.vacuum_clean_zone 
 data: 
-  zone:#coordonnées de la zone tel qu’insérées dans la carte 
+  zone:#coordonnées de la zone tel qu’insérées dans la carte 
 	- - 27333 
 	  - 28810 
 	  - 28777 
@@ -355,6 +358,9 @@ sequence:
 		- 18 
 entity_id: vacuum.wall_e
 ````
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/code.jpg)
+
 Seul hic, pas de répétition possible pour les nombres de passages.
 ### Combo !
 Maintenant que tu en es là tu peux mixer les commandes dans un même script pour aussi gérer la puissance d’aspiration de quasi nul en mode serpillère, à très fort !
