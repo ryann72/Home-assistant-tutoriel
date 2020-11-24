@@ -281,9 +281,18 @@ Tutoriel cartographie aspirateur Xiaomi
 Tu cliques sur « démarrage », une popup apparaît !
 Tu copies chaque nombre sous la forme indiquée. (Le dernier chiffre isolé ne te servira pas ici…)
 « Exemple d’affichage de la pop-up pour la zone sélectionnée »
-6. Tu vérifies en cliquant sur ta jolie nouvelle carte, « mode / zones », tout ce qui est enregistré !
-7. Tu peux maintenant changer la valeur de « debug » par « false » quand tu as fini.
-Voici le résultat avec les différentes zones et ici avec deux zones sélectionnées (verte)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/debug.jpg)
+
+
+
+3. Tu vérifies en cliquant sur ta jolie nouvelle carte, « mode / zones », tout ce qui est enregistré !
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple-zone.jpg)
+4. Tu peux maintenant changer la valeur de « debug » par « false » quand tu as fini.
+Voici le résultat avec les différentes zones 
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple1.jpg)
+
+et ici avec deux zones sélectionnées (verte)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/exemple2.jpg)
 
 ## Automation ou script pour nettoyage par pièce ou zone.
 Tu te souviens de la différence entre Rooms et zone ?
@@ -315,6 +324,9 @@ command: app_segment_clean
 params:
 	- 23
 ````
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/outilsdev.jpg)
+
 Regarde sur la carte, même de l’app Xiaomi peu importe, où il va et quelle pièce se met en surbrillance… Bingo ! Tu as la correspondance ! Stoppe-le, il va assez tourner en rond le temps que tu fasses chaque numéro, ne le fatigue pas pour rien !
 Fais-toi un script comme ceci, avec le même service qu’on vient d’utiliser, imagine que moi c’est ma cuisine, je fais ça : 
 ```` yaml 
@@ -385,8 +397,16 @@ Alexa (et Google Assistant), via l’abonnement Nabu Casa
 
 Je te parle ici de cette méthode étant celle que j’utilise, mon complice te raconte la méthode Google sans Nabu Casa juste après ! Bien entendu tu as intégré Alexa, sinon revient après… !
 Rends-toi dans Configuration / Cloud Home Assistant / Alexa / Gérer les entités
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/alexa1.jpg)
+
 Tu sélectionnes celles que tu veux injecter, logique… ! « Exposer l’entité »
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/alexa2.jpg)
+
 Reviens en arrière et tu valides « synchroniser les entités »
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/alexa3.jpg)
+
 Tadaaam !!
 
 Normalement tu reçois instantanément une notification de ton app Alexa comme quoi des nouvelles choses sont arrivées…
@@ -397,6 +417,9 @@ Tu vas créer une nouvelle routine.
 Et dans actions tu vas chercher « maison connectée », puis « contrôler une scène ».
 Tadaaaam !
 Tous tes scripts, automatisations sont là !
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/Images/alexa4.jpg)
+
 T’as plus qu’à choisir le bon, et te faire une petite phrase de déclenchement.
 Pour ma part, ayant essayé sans succès « passe l’aspi », j’ai choisi « passe l’aspirateur dans xx » ou « passe la serpillière dans xx ».
 > Astuce : dans Alexa, (ou Google), n’enregistre pas ton robot dans une pièce style « salon » ! 
