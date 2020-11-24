@@ -233,15 +233,15 @@ Regarde la prochaine capture si tu doutes…
 
 ````yaml 
 type: 'custom:xiaomi-vacuum-map-card'
-entity: vacuum.xiaomi_vacuum_cleaner #nom de ton entité aspirateur « vacuum.xxxx »
-map_camera: camera.aspirateur #nom de ton entité caméra vu juste avant…
-camera_calibration: true #permet de récupérer la calibration automatique
+entity: vacuum.xiaomi_vacuum_cleaner #nom de ton entité aspirateur « vacuum.xxxx »
+map_camera: camera.aspirateur  #nom de ton entité caméra vu juste avant…
+camera_calibration: true  #permet de récupérer la calibration automatique
 language: fr #langue de la carte
 modes:
 	- predefined_zones
 	- go_to_target
 	- zoned_cleanup
-zones: #on t’explique après comment obtenir les cordonnées
+zones:  #on t’explique après comment obtenir les cordonnées
 	- - - 26050
 		- 23500
 		- 26950
@@ -305,7 +305,7 @@ Pour réaliser une automation ou un script permettant le nettoyage d’une zone 
 ```` yaml
 service: xiaomi_miio.vacuum_clean_zone 
 data: 
-  zone:#coordonnées de la zone tel qu’insérées dans la carte 
+  zone: #coordonnées de la zone tel qu’insérées dans la carte 
 	- - 27333 
 	  - 28810 
 	  - 28777 
