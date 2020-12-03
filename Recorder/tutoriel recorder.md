@@ -1,0 +1,94 @@
+# Tutoriel utilisation du recorder de home assistant
+Aurel RV / Yann RITTER Tuto Home Assistant 
+
+Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant
+L'objectif est multiple : 
+- Limitation des ecritures en base de données donc preservation de ta carte SD
+- Chargement plus rapide des graphiques 
+- Reboot de home assistant plus rapide
+- Plus de problèmes de backup trop lourd en échec
+
+
+## Compatibilité
+- Toutes versions de home assistant après la 0.7
+
+## Source 
+https://www.home-assistant.io/integrations/recorder/
+
+
+
+## Avertissement 
+
+Si, tu lis ça ! Non mais, Y’a pas que le tuto qui compte ! On a deux trois bricoles importantes à te dire avant.
+Maintenant tu es adulte, t’as bien grandi, alors tu comprends que toutes les manipulations que tu vas faire sont sous ta responsabilité !
+Si ton Home Assistant plante, ou que ton Raspberry explose… On n’y est pour rien !
+Tout ce qui suit a été d’abord installé, testé par nos soins. Ça fonctionne. Et on l’utilise au quotidien !
+Donc tu prends ton temps, tu lis bien, tu ne fais pas l’enfant à vouloir aller trop vite et sauter des étapes en mode « Ouais c’est bon je sais ! »
+Ce n’est pas un tuto sur les bases, alors certaines étapes sont pour nous acquises et ne seront pas détaillées ici. Y’a toujours le groupe si vraiment tu as besoin d’aide…
+On y va ?
+
+
+## Prérequis / Installation des modules
+
+Avoir accès au fichier de configuration.yaml en utilisant l'un des deux outils ci-dessous
+- SambaShare
+- FileEditor
+
+## Configuration du recorder
+Tu vas devoir utiliser FileEditor ou sambaShare pour modifier ton fichier configuration.yaml
+
+Ajoute la configuration ci-dessous :
+> Si tu as déjà « recorder : » tu ne le remets pas hein ! Tu colles en dessous…
+
+````yaml recorder:
+  purge_keep_days: 7 # durée de conservation des données
+  exclude: # permet d'exclure tous les éléments listé ci-dessous de votre base de données
+    domains: # filtrage par domaine
+      - automation
+      - updater
+      - group
+      - media_player
+      - scene
+      - script
+      - sun
+      - weather
+    entities: # filtrage par entités spécifiques
+      - sensor.last_boot 
+      - sensor.date
+      - camera.aspirateur #utile afin de ne pas surcharger votre base de donnée avec les coordonnées et carte de votre aspirateur chargé toutes les 5 secondes
+    event_types: # filtrage par evenements
+      - call_service 
+````
+
+Une fois la configuration réalisée, il faut redémarrer home assistant.
+A chaque modification apportée ici, un restart de Home Assistant est nécessaire.
+
+Si tu veux encore réduire la taille, il est possible de récupérer les domaines que tu utilises
+
+Dans les outils de développement colle le bloc suivant :
+````yaml {%- for d in states | groupby('domain') %}
+  {% if loop.first %}{{loop.length}} Domains:
+  {% endif %}- {{ d[0] }}: {{d[0]|count}}
+{%- endfor %}
+````
+
+Voici le resultat : 
+
+la liste des domaines affichés est utilisable afin de compléter la liste d'exclude.
+
+## Retours persos
+Depuis que nous utilisons cette méthode, nous avons énormément réduit la taille de la base de données
+Yann  de 1Go sur 7 jour à XX
+Aurel de 8Go sur 7 jours à XX
+
+Il y a également moins de lenteur au démarrage / chargement des graphiques.
+
+## Le mot de la fin
+Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
+Nous l’avons réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de nos métiers et nos vies (si on en a !).
+Nous n’assurons pas le support de tous les problèmes mais nous seront là si besoin sur le groupe, comme d’habitude.
+Si tout fonctionne, remercie-moi.
+Mais sinon, c’est forcément de sa faute.
+Qui écrit ? Lui ou moi.
+En ce moment ? Forcément moi, parfois lui.
+Deux potes passionnés, Yann Ritter et Aurel RV.
