@@ -82,7 +82,7 @@ Ajoute la configuration ci-dessous :
     event_types: # filtrage par evenements
       - call_service 
 ````
-Resultat : 
+Résultat : 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/config1.JPG)
 
