@@ -28,7 +28,7 @@ Ce n’est pas un tuto sur les bases, alors certaines étapes sont pour nous acq
 On y va ?
 
 
-## Prérequis / Installation des modules
+## Prérequis
 
 Avoir accès au fichier de configuration.yaml en utilisant l'un des deux outils ci-dessous
 - SambaShare
