@@ -110,7 +110,7 @@ Depuis que nous utilisons cette méthode, nous avons énormément réduit la tai
 - Yann  de 1.2Go sur 7 jour à XX
 - Aurel de 8Go sur 7 jours à XX
 
-Il y a également moins de lenteur au démarrage / chargement des graphiques.
+Il y a également moins de lenteurs au démarrage / chargement des graphiques.
 
 ## Le mot de la fin
 Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
