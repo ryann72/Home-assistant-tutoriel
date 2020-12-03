@@ -62,6 +62,7 @@ Ajoute la configuration ci-dessous :
       - call_service 
 ````
 Resultat : 
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/config1.JPG)
 
 Une fois la configuration réalisée, il faut redémarrer home assistant.
@@ -77,6 +78,7 @@ Dans les outils de développement colle le bloc suivant :
 ````
 
 Voici le resultat : 
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/domain.jpg)
 
 La liste des domaines affichés est utilisable afin de compléter la liste d'exclude.
