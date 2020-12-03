@@ -46,7 +46,7 @@ Deux cas de figure :
 -  Soit tu as utilisé notre précédent tutoriel pour l'aspirateur
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/tutoriel%20cartographie%20aspirateur.md 
 
-Et l'on te conseil de supprimer les données de la carte de ta base de données en utilisant l'exemple ci-dessous :
+Et on te conseille de supprimer les données de la carte de ta base de données en utilisant l'exemple ci-dessous :
 
 ````yaml recorder:
   purge_keep_days: 7 # durée de conservation des données
@@ -58,7 +58,7 @@ Et l'on te conseil de supprimer les données de la carte de ta base de données 
     event_types: # filtrage par evenements
       - call_service 
 ````
-- Soit tu n'a pas de cartographie de l'aspirateur mais tu souhaites réduire ta base de données, voici un autre exemple :
+- Soit tu n'as pas de cartographie de l'aspirateur mais tu souhaites réduire ta base de données, voici un autre exemple :
 
 Ajoute la configuration ci-dessous :
 > Si tu as déjà « recorder : » tu ne le remets pas hein ! Tu colles en dessous…
