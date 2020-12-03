@@ -1,5 +1,5 @@
 # Tutoriel utilisation du recorder de home assistant
-Aurel RV / Yann RITTER Tuto Home Assistant 
+Yann RITTER / Aurel RV Tuto Home Assistant 
 
 Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant
 L'objectif est multiple : 
