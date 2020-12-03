@@ -1,7 +1,8 @@
 # Tutoriel utilisation du recorder de home assistant
 Yann RITTER / Aurel RV Tuto Home Assistant 
 
-Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant
+Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant.
+
 L'objectif est multiple : 
 - Limitation des écritures en base de données donc préservation de ta carte SD
 - Chargement plus rapide des graphiques 
