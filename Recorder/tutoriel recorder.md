@@ -37,7 +37,7 @@ Avoir accès au fichier de configuration.yaml en utilisant l'un des deux outils 
 ## Configuration du recorder
 Tu vas devoir utiliser FileEditor ou sambaShare pour modifier ton fichier configuration.yaml
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/recoder/Images/fichier.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/fichier.JPG)
 
 Ajoute la configuration ci-dessous :
 > Si tu as déjà « recorder : » tu ne le remets pas hein ! Tu colles en dessous…
@@ -62,7 +62,7 @@ Ajoute la configuration ci-dessous :
       - call_service 
 ````
 Resultat : 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/recoder/Images/config1.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/config1.JPG)
 
 Une fois la configuration réalisée, il faut redémarrer home assistant.
 A chaque modification apportée ici, un restart de Home Assistant est nécessaire.
@@ -77,7 +77,7 @@ Dans les outils de développement colle le bloc suivant :
 ````
 
 Voici le resultat : 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/recoder/Images/domain.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/domain.jpg)
 
 La liste des domaines affichés est utilisable afin de compléter la liste d'exclude.
 
