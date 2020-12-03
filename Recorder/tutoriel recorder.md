@@ -85,8 +85,8 @@ La liste des domaines affichés est utilisable afin de compléter la liste d'exc
 
 ## Retours persos
 Depuis que nous utilisons cette méthode, nous avons énormément réduit la taille de la base de données
-Yann  de 1Go sur 7 jour à XX
-Aurel de 8Go sur 7 jours à XX
+- Yann  de 1.2Go sur 7 jour à XX
+- Aurel de 8Go sur 7 jours à XX
 
 Il y a également moins de lenteur au démarrage / chargement des graphiques.
 
