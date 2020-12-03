@@ -71,7 +71,8 @@ A chaque modification apportée ici, un restart de Home Assistant est nécessair
 Si tu veux encore réduire la taille, il est possible de récupérer les domaines que tu utilises
 
 Dans les outils de développement colle le bloc suivant :
-````yaml {%- for d in states | groupby('domain') %}
+````
+{%- for d in states | groupby('domain') %}
   {% if loop.first %}{{loop.length}} Domains:
   {% endif %}- {{ d[0] }}: {{d[0]|count}}
 {%- endfor %}
