@@ -3,7 +3,7 @@ Yann RITTER / Aurel RV Tuto Home Assistant
 
 Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant
 L'objectif est multiple : 
-- Limitation des ecritures en base de données donc preservation de ta carte SD
+- Limitation des écritures en base de données donc préservation de ta carte SD
 - Chargement plus rapide des graphiques 
 - Reboot de home assistant plus rapide
 - Plus de problèmes de backup trop lourd en échec
