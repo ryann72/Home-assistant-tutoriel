@@ -79,7 +79,7 @@ Dans les outils de développement colle le bloc suivant :
 
 Voici le resultat : 
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/domain.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/domain2.jpg)
 
 La liste des domaines affichés est utilisable afin de compléter la liste d'exclude.
 
