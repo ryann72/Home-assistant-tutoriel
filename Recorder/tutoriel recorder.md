@@ -108,8 +108,10 @@ La liste des domaines affichés est utilisable afin de compléter la liste d'exc
 
 ## Retours persos
 Depuis que nous utilisons cette méthode, nous avons énormément réduit la taille de la base de données
-- Yann  de 1.2Go sur 7 jour à XX
-- Aurel de 8Go sur 7 jours à XX
+- Yann  de 1.2Go sur 1 journée à 80mo
+- Aurel de 8Go sur 1 journée  à 50mo
+
+Le résultat étant bien évidemment variable en fonction de ton utilisation, du nombre de sensors et du nombre d'éléments filtrés par le recorder.
 
 Il y a également moins de lenteurs au démarrage / chargement des graphiques.
 
