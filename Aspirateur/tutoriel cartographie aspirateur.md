@@ -456,6 +456,14 @@ Attends le redémarrage complet de home assistant avant de crier « OK GOOGLE sy
 Dans Google assistant tu devrais voir apparaitre les scripts.
 Astuce : ne pas associer les scripts à la pièce concernée dans Google assistant. Sinon tu risques de voir danser ton aspirateur préféré quand tu vas demander à Google d’allumer le salon pour boire ta bière, tranquillement installé dans ton canapé.
 
+## Sécurisation (recorder)
+
+Nous avons remarqué que la cartographie va gonfler la base de données home assistant avec les cooordonnées recupérées.
+Tu trouveras alors un tuto fun et sympa permettant de limiter la volumétrie en base de données
+
+https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/tutoriel%20recorder.md
+
+
 ## Retours persos
 Depuis que nous utilisons cette méthode, je me sers à 90% de mon assistant vocal.
 J’ai différencié les phrases « passe l’aspirateur dans… » : 1 passage (room) puissance standard,
