@@ -185,7 +185,7 @@ Puis dans le déclencheur :
 Ajouter les conditions souhaités
 Ajouter les actions
 
-Sauvegarder et tester votre automatisation.
+Sauvegarde et teste ton automatisation.
 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt10.JPG)
@@ -193,7 +193,7 @@ Sauvegarder et tester votre automatisation.
 
 
 ## Le mot de la fin
-Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
+Une petite doc, un tuto, qui je l'espère t’a aidé le mieux possible.
 Je l'ai réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
 Si tout fonctionne, remercie-moi.
