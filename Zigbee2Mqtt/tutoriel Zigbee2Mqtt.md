@@ -143,6 +143,10 @@ Redemarrer l'addon.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt7.JPG)
 
+Puis il faut manipuler le capteur en général 3/5seconde sur le bouton pour realiser l'association.
+
+
+
 Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés 
 
 permit_join: false
