@@ -1,7 +1,8 @@
 # Tutoriel utilisation du recorder de home assistant
 Yann RITTER / Aurel RV Tuto Home Assistant 
 
-Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant
+Dans ce tutoriel tu trouveras des conseils d'optimisations de la base de données home assistant.
+
 L'objectif est multiple : 
 - Limitation des écritures en base de données donc préservation de ta carte SD
 - Chargement plus rapide des graphiques 
@@ -46,7 +47,7 @@ Deux cas de figure :
 -  Soit tu as utilisé notre précédent tutoriel pour l'aspirateur
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Aspirateur/tutoriel%20cartographie%20aspirateur.md 
 
-Et l'on te conseil de supprimer les données de la carte de ta base de données en utilisant l'exemple ci-dessous :
+Et on te conseille de supprimer les données de la carte de ta base de données en utilisant l'exemple ci-dessous :
 
 ````yaml recorder:
   purge_keep_days: 7 # durée de conservation des données
@@ -58,7 +59,7 @@ Et l'on te conseil de supprimer les données de la carte de ta base de données 
     event_types: # filtrage par evenements
       - call_service 
 ````
-- Soit tu n'a pas de cartographie de l'aspirateur mais tu souhaites réduire ta base de données, voici un autre exemple :
+- Soit tu n'as pas de cartographie de l'aspirateur mais tu souhaites réduire ta base de données, voici un autre exemple :
 
 Ajoute la configuration ci-dessous :
 > Si tu as déjà « recorder : » tu ne le remets pas hein ! Tu colles en dessous…
@@ -82,7 +83,7 @@ Ajoute la configuration ci-dessous :
     event_types: # filtrage par evenements
       - call_service 
 ````
-Resultat : 
+Résultat : 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/Images/config1.JPG)
 
@@ -107,10 +108,12 @@ La liste des domaines affichés est utilisable afin de compléter la liste d'exc
 
 ## Retours persos
 Depuis que nous utilisons cette méthode, nous avons énormément réduit la taille de la base de données
-- Yann  de 1.2Go sur 7 jour à XX
-- Aurel de 8Go sur 7 jours à XX
+- Yann  de 1.2Go sur 1 journée à 80mo
+- Aurel de 8Go sur 1 journée  à 50mo
 
-Il y a également moins de lenteur au démarrage / chargement des graphiques.
+Le résultat étant bien évidemment variable en fonction de ton utilisation, du nombre de sensors et du nombre d'éléments filtrés par le recorder.
+
+Il y a également moins de lenteurs au démarrage / chargement des graphiques.
 
 ## Le mot de la fin
 Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
