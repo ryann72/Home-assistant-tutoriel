@@ -32,19 +32,19 @@ On y va ?
 ## Prérequis
 
 Disposer d'une clé zigbee compatible zigbee2mqtt
-la liste des compatibilités est disponible ici : https://www.zigbee2mqtt.io/information/supported_adapters.html 
+la liste des compatibilités est disponible ici :  https://www.zigbee2mqtt.io/information/supported_adapters.html 
 
 ## Ajout d'un utilisateur pour MQTT
 Dans le menu configuration / utilisateurs
 
 Creer un nouvel utilisateur spécifique pour zigbee2mqtt.
 
-Par exemple 
-Nom : zigbeemqtt
-Nom d'utilisateur : zigbeemqtt
-Mot de passe : 123456
-Confirmer le mot de passe : 123456
-Décocher l'option : administrateur
+Par exemple :
+- Nom : zigbeemqtt
+- Nom d'utilisateur : zigbeemqtt
+- Mot de passe : 123456
+- Confirmer le mot de passe : 123456
+- Décocher l'option : administrateur
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/utilisateur.JPG)
 
@@ -62,7 +62,7 @@ Tu devras alors configurer le broker tel que la capture ci-dessous.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/mosquitto.JPG)
 
-puis tu peux démarrer l'addon.
+Tu peux démarrer l'addon.
 
 
 ###Ajout de Zigbee2Mqtt
@@ -88,10 +88,14 @@ Il faut renseigner ici 3 points :
 
 
 Le user et le password doivent correspondre à l'utilisateur crée précédement dans home assistant
+
+
 - user : zigbeemqtt
 - password : 123456
 
 Le port correspond à l'identifiant matériel de la clé zigbee (il faut qu'elle soit connectée sur un port USB du PI de preférence avec une rallonge USB pour limiter les interférences)
+
+
 Pour l'obtenir il faut naviguer dans Supervisor → System → Host ⋮ → Hardware
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt4.JPG)
@@ -122,11 +126,12 @@ mot de passe : 123456
 puis valider
 
 Les peripheriques ajoutés remonteront alors automatiquement en tant qu'appareils / entités
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt6.JPG)
 
 ## Activer la decouverte zigbee
 
-Tu trouveras ici la liste des peripheriques compatibles : https://www.zigbee2mqtt.io/information/supported_devices.html
+Tu trouveras ici la liste des peripheriques compatibles :  https://www.zigbee2mqtt.io/information/supported_devices.html
 
 Pour pouvoir associer un périphérique zigbee, il est nécessaire d'activer la decouverte dans l'addon zigbee2mqtt
 
@@ -134,18 +139,18 @@ Modifier la valeur → permit_join: true
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt7.JPG)
 
-Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés
+Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés 
+
 permit_join: false
 
-puis redemarrer l'addon.
+Redemarrer l'addon.
 
 
 ## Un exemple d'appareils découvert
 
 Exemple avec un capteur aqara de porte et fenêtre 
 
-Depuis le menu : 
-Configuration → Intégration → MQTT → appareils
+Depuis le menu : Configuration → Intégration → MQTT → appareils
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt8.JPG)
 
@@ -178,4 +183,5 @@ Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
 Je l'ai réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
 Si tout fonctionne, remercie-moi.
+
 Yann RITTER
