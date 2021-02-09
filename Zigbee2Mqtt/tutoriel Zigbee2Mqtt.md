@@ -67,7 +67,7 @@ Tu peux démarrer l'addon.
 
 ### Ajout de Zigbee2Mqtt
 
-Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories:
+Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories
 
 Ajoute l'URL suivante : https://github.com/danielwelch/hassio-zigbee2mqtt
 
@@ -143,6 +143,10 @@ Redemarrer l'addon.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt7.JPG)
 
+Puis il faut manipuler le capteur en général 3/5seconde sur le bouton pour realiser l'association.
+
+
+
 Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés 
 
 permit_join: false
@@ -185,7 +189,7 @@ Puis dans le déclencheur :
 Ajouter les conditions souhaités
 Ajouter les actions
 
-Sauvegarder et tester votre automatisation.
+Sauvegarde et teste ton automatisation.
 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt10.JPG)
@@ -193,7 +197,7 @@ Sauvegarder et tester votre automatisation.
 
 
 ## Le mot de la fin
-Une petite doc, un tuto, qui on espère t’a aidé le mieux possible.
+Une petite doc, un tuto, qui je l'espère t’a aidé le mieux possible.
 Je l'ai réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
 Si tout fonctionne, remercie-moi.
