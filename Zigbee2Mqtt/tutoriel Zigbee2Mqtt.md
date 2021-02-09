@@ -137,11 +137,17 @@ Pour pouvoir associer un périphérique zigbee, il est nécessaire d'activer la 
 
 Modifier la valeur → permit_join: true
 
+Sauvegarder la configuration
+
+Redemarrer l'addon.
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt7.JPG)
 
 Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés 
 
 permit_join: false
+
+Sauvegarder la configuration
 
 Redemarrer l'addon.
 
