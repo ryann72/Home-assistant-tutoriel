@@ -67,7 +67,7 @@ Tu peux démarrer l'addon.
 
 ### Ajout de Zigbee2Mqtt
 
-Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories:
+Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories
 
 Ajoute l'URL suivante : https://github.com/danielwelch/hassio-zigbee2mqtt
 
