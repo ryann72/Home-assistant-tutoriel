@@ -30,7 +30,7 @@ On y va ?
 
 - Installer la version desktop de potman disponible ici gratuitement : https://www.postman.com/downloads/ 
 
-- Télécharger les deux archives du dossier : postman
+- Télécharger les deux archives du dossier : https://github.com/ryann72/Home-assistant-tutoriel/tree/main/LocalTuya/postman 
 
 - Disposer d'un smartphone avec l'application Tuya
 
