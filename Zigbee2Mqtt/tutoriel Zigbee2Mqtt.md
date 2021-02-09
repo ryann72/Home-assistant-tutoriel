@@ -119,11 +119,11 @@ Dans les logs de l'addon, tu auras alors le lancement de l'addon sans erreur.
 Dans le menu Configuration → Intégration → ajouter l'intégration → rechercher MQTT
 Configuration : 
 
-Dans le host : localhost
-user : zigbeemqtt
-mot de passe : 123456
+- host : localhost
+- user : zigbeemqtt
+- mot de passe : 123456
 
-puis valider
+Cliquer sur valider
 
 Les peripheriques ajoutés remonteront alors automatiquement en tant qu'appareils / entités
 
@@ -166,12 +166,20 @@ Je poursuis avec un exemple d'automatisation avec ce capteur comme déclencheur
 Dans le menu : Configuration → Automatisations → ajouter une automatisation → commencer par une automatisation vide
 
 
-Définir
+Définir :
 - un nom d'automatisation
-puis dans le déclencheur 
+
+
+Puis dans le déclencheur :
+
 - choisir état comme type de déclencheur
 - choisir le sensor provenant de zigbee2mqtt
 - definir le changement d'état ici sur une ouverture donc on
+
+Ajouter les conditions souhaités
+Ajouter les actions
+
+Sauvegarder et tester votre automatisation.
 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt10.JPG)
