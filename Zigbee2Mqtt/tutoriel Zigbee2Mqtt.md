@@ -54,7 +54,7 @@ Par exemple :
 Tu vas devoir utiliser Zigbee2mqtt et Mosquitto broker
 
 
-###Ajout de Mosquitto broker
+### Ajout de Mosquitto broker
 
 Navigue dans le menu : Supervisor → Add-on store → Mosquitto broker → installer
 
@@ -65,7 +65,7 @@ Tu devras alors configurer le broker tel que la capture ci-dessous.
 Tu peux démarrer l'addon.
 
 
-###Ajout de Zigbee2Mqtt
+### Ajout de Zigbee2Mqtt
 
 Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories:
 
@@ -96,7 +96,7 @@ Le user et le password doivent correspondre à l'utilisateur crée précédement
 Le port correspond à l'identifiant matériel de la clé zigbee (il faut qu'elle soit connectée sur un port USB du PI de preférence avec une rallonge USB pour limiter les interférences)
 
 
-Pour l'obtenir il faut naviguer dans Supervisor → System → Host ⋮ → Hardware
+Pour l'obtenir il faut naviguer dans Supervisor → System → Host → ⋮ → Hardware
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt4.JPG)
 
