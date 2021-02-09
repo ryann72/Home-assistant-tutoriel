@@ -46,14 +46,14 @@ On y va ?
 Afin de récupérer les local keys tuya, nous devons ouvrir un compte développeur sur l'environnement Tuya
 
 
-### 1 creation du compte
+### 1 - Création du compte
 
 Aller sur le site : https://iot.tuya.com/ et creer un compte
 
 La page une fois connecté : 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/iot.JPG)
 
-### 2 creation du projet
+### 2 - Création du projet
 
 Naviguer dans le menu de gauche pour aller sur "Cloud"
 
@@ -84,7 +84,7 @@ Tu auras besoin de récupérer ici les informations d'autorization key pour post
 !!! J'y reviendrais par la suite !!!
 
 
-### 3 lien avec le compte tuya sur smartphone
+### 3 - Lien avec le compte tuya sur smartphone
 
 Tu devras à présent lier ton compte tuya au compte de dev crée ici afin de retrouver les périphériques.
 
@@ -104,13 +104,13 @@ Scan le avec ton smartphone dans l'application tuya.
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/Capture5.JPG) 
 
 
-### 4 remontées de périphériques connus
+### 4 - Remontées de périphériques connus
 
 La connexion étant valide, les peripheriques rattachés au compte remontent tel que l'affichage suivant.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/Capture6.JPG) 
 
-### 5 activation de l'API group
+### 5 - Activation de l'API group
 
 Naviguer dans le menu de gauche pour aller sur "Cloud" puis sur "API Group" et activer le "Device Management"
 
@@ -125,7 +125,7 @@ Nous en avons terminé sur la partie cloud de tuya.
 Passons sur postman afin de récupérer la local keys.
 
 
-## Utilisation de postman
+## Utilisation de Postman
 
 Tu devras decompresser les deux archives téléchargées en pré-requis.
 Puis les importer dans postman.
@@ -147,7 +147,7 @@ Renseigner les données spécifiques à ton compte disponible ici :
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/creerProjet3.JPG)
 
-### Récupération du token d'identifiction
+### 1 - Récupération du token d'identifiction
 Dans postman 
 - client_id
 - secret
@@ -158,7 +158,7 @@ puis appeler le service "acces token" et tu devrais avoir un résultat similaire
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/postman6.JPG)
 
-### Récupération du device id 
+### 2 - Récupération du device id 
 
 Il faut définir le device ID dans la configuration postman.
 
@@ -171,7 +171,7 @@ et le renseigner ici :
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/postman7.JPG)
 
 
-### Récuperation de la local keys 
+### 3 - Récuperation de la local keys 
 
 
 Appele le service "{{url}}/v1.0/devices/{{device_id}}" 
@@ -185,7 +185,7 @@ Note bien le couple device id / local key, il te sera nécessaire pour la suite.
 Tu peux refaire la procédure pour récupérer les tokens de tous tes appareils Tuya.
 
 
-### Intégration dans home assistant 
+## Intégration dans home assistant 
 
 Dans home assistant, tu devras installer local Tuya depuis HACS.
 
