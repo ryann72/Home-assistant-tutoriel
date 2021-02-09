@@ -1,7 +1,7 @@
 # Tutoriel mise en place de local tuya  
 Yann RITTER  Tuto Home Assistant 
 
-Dans ce tutoriel, tu trouveras les informations nécéssaire à la mise en place de localtuya
+Dans ce tutoriel, tu trouveras les informations nécéssaires à la mise en place de localtuya
 
 L'objectif : ne plus etre dépendant du cloud tuya
 
@@ -70,12 +70,13 @@ Valider avec le bouton "create"
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/creerProjet2.JPG)
 
 
-En selectionnant le projet précédement crée, tu optiendras alors les informations suivantes 
+En selectionnant le projet précédement crée, tu obtiendras alors les informations suivantes 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/creerProjet3.JPG)
 
 Tu auras besoin de récupérer ici les informations d'autorization key pour postman. 
-J'y reviendrais par la suite !!!
+
+!!! J'y reviendrais par la suite !!!
 
 
 ### 3 lien avec le compte tuya sur smartphone
@@ -89,13 +90,14 @@ Image de l'écran attendu :
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/creerProjet4.JPG)
 
-et cliquer sur le bouton  "Add App Account"
+Clique sur le bouton  "Add App Account"
 
-Un QRcode a scanner est alors affichés
+Un QRcode à scanner est alors affiché
+
+Scan le avec ton smartphone dans l'application tuya.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/Capture5.JPG) 
 
-Avec ton smartphone dans l'application tuya lance le scan du QRCode.
 
 ### 4 remontées de périphériques connus
 
@@ -171,7 +173,7 @@ Appele le service "{{url}}/v1.0/devices/{{device_id}}"
 
 La local key est disponible dans la réponse : 
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/Capture4.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/postman4.JPG)
 
 Note bien le couple device id / local key, il te sera nécessaire pour la suite.
 
@@ -210,7 +212,8 @@ Il reste à completer les données correspondantes :
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/Images/integration2.JPG)
 
 
-##Attention 
+## Attention 
+
 Il n'est pas possible de cumuler l'intégration cloud et local de tuya sur home assistant.
 
 J'ai également remarqué que lors de certains reboot / mise à jour, il était nécessaire de cliquer sur recharger au niveau de l'intégration local tuya afin de retrouver en ligne son appareil.
