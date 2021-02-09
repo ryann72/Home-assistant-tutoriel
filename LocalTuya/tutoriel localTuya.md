@@ -13,7 +13,12 @@ L'objectif : ne plus etre dépendant du cloud tuya
 ## Source 
 https://github.com/rospogrigio/localtuya
 
-
+Pour le moment l'integration permet la prise en charge des types d'appareils suivant ;
+- 1 and multiple gang switches
+- Wi-Fi smart plugs (including those with additional USB plugs)
+- Lights
+- Covers
+- Fans
 
 ## Avertissement 
 
