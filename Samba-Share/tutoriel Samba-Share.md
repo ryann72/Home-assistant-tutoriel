@@ -102,7 +102,7 @@ sinon vous avez l'acces tel que
 
 ## Le mot de la fin
 Une petite doc, un tuto, qui je l'espère t’a aidé le mieux possible.
-Je l'ai réalisé avec l'aide d'un membre du groupe (https://www.facebook.com/groups/homeassistantgroupefrance)avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
+Je l'ai réalisé avec l'aide d'un membre du groupe ( https://www.facebook.com/groups/homeassistantgroupefrance ) avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
 Si tout fonctionne, remercie-moi.
 
