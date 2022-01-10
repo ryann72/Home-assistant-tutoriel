@@ -204,6 +204,7 @@ Tu arriveras sur le menu suivant
 Deux options:
 
 1- Le device est trouvé alors tu le sélectionne dans la liste
+
 2- Il n'est pas trouvé et tu choisi ...
 
 Il reste à completer les données correspondantes :
