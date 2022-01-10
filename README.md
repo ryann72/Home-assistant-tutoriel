@@ -23,3 +23,8 @@ https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/tutoriel%
 Le cinquième traite de l'integration samba-share
 
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/tutoriel%20Samba-Share.md 
+
+
+Si vous aimez quelque chose ici, likez 🌟 mon repo !!!
+
+Et si en plus vous souhaitez m'offrir une petite bière 🍺 ou un café ☕️ :  https://www.paypal.com/paypalme/YannRitter
