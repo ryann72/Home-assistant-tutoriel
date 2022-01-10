@@ -56,12 +56,12 @@ Pour plus de praticité, tu peux mettre ton login et mot de passe Windows cela p
 
 Tu peux également restreindre la connexion à certaines adresses IP
 
-allow_hosts:
+```allow_hosts:
   - 192.168.0.0/16 --> toutes les ip du réseau courant (configuration générale des box)
   
 allow_hosts:
   - 192.168.0.2 --> uniquement la machine avec l'IP défini
-
+```
 
 Tu peux sauvegarder et démarrer l'addon.
 
@@ -70,7 +70,7 @@ Tu peux sauvegarder et démarrer l'addon.
 
 Sur Windows 8 et 10, pour vérifier si SMB1 est activé tu devras utiliser la commande suivante en PowerShell en mode administrateur
 
-Get-SmbServerConfiguration | Select EnableSMB2Protocol
+```Get-SmbServerConfiguration | Select EnableSMB2Protocol```
 
 voici le résultat si le module samba est activé.
 
