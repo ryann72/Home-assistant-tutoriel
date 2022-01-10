@@ -30,14 +30,14 @@ On y va ?
 
 Disposer d'une installation home assistant
 
-##Utilité de Samba-Share
+## Utilité de Samba-Share
 
 Samba est un protocole de partage de fichiers.
 Il permet d’accéder aux fichiers de Home Assistant quel que soit le système sur lequel il est installé.
 L’explorateur de fichiers de Windows,de macOS ou de n’importe quelle distribution Linux.
 
 
-##Ajout de Samba-Share
+## Ajout de Samba-Share
 Dans le menu configuration / Modules complémentaires, Sauvegardes et superviseur
 Puis dans l'onglet Modules complementaires rechercher Samba dans la boutique des modules complémentaire
 
