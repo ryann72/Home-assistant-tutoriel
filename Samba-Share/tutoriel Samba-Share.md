@@ -56,7 +56,8 @@ Pour plus de praticité, tu peux mettre ton login et mot de passe Windows cela p
 
 Tu peux également restreindre la connexion à certaines adresses IP
 
-```allow_hosts:
+```
+allow_hosts:
   - 192.168.0.0/16 --> toutes les ip du réseau courant (configuration générale des box)
   
 allow_hosts:
