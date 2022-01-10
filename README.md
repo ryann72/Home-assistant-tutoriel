@@ -14,3 +14,12 @@ https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Recorder/tutoriel%2
 Le troisième traite de l'integration zigbee2mqtt
 
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/tutoriel%20Zigbee2Mqtt.md 
+
+Le quatrième traite de l'integration localTuya
+
+https://github.com/ryann72/Home-assistant-tutoriel/blob/main/LocalTuya/tutoriel%20localTuya.md 
+
+
+Le cinquième traite de l'integration samba-share
+
+https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/tutoriel%20Samba-Share.md 
