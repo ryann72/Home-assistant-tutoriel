@@ -91,7 +91,7 @@ Activez-le (cochez la case) s’il n’est pas déjà activé.
 
 Vous pouvez à présent tester la connexion via un explorateur de fichier
  
- '\\ip du serveur HA'
+ ```\\ip du serveur HA```
 
 Une fenetre de connexion s'ouvre si le user / mot de passe est différent de la session courante
 sinon vous avez l'acces tel que 
