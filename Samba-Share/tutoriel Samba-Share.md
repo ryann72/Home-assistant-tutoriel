@@ -50,7 +50,7 @@ Tu vas devoir configurer l'addon Samba-Share
 
 Tu devras alors configurer l'addon tel que la capture ci-dessous.
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/module2.png)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/module2.PNG)
 
 Pour plus de praticité, tu peux mettre ton login et mot de passe Windows cela permettra la connexion automatique
 Tu peux également restreindre la connexion à certaines adresses IP
@@ -73,7 +73,7 @@ Get-SmbServerConfiguration | Select EnableSMB2Protocol
 
 voici le résultat si le module samba est activé.
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/powershell1.png)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/powershell1.PNG)
 
 S'il n'est pas activé : 
 
@@ -82,7 +82,7 @@ Ensuite, sélectionnez Activer ou désactiver les fonctionnalités Windows.
 Faites défiler la liste pour trouver la prise en charge du partage de fichiers SMB Direct.
 Activez-le (cochez la case) s’il n’est pas déjà activé.
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/windows1.png)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/windows1.PNG)
 
 
 Vous pouvez à présent tester la connexion via un explorateur de fichier
@@ -91,7 +91,7 @@ Vous pouvez à présent tester la connexion via un explorateur de fichier
 Une fenetre de connexion s'ouvre si le user / mot de passe est différent de la session courante
 sinon vous avez l'acces tel que 
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/windows2.png)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Samba-Share/Images/windows2.PNG)
 
 
 ## Le mot de la fin
