@@ -246,6 +246,74 @@ Explication :
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat2.JPG)
 
+### Etape 6 : 
+
+La creation d'un thermosat mqtt pour le pilotage de la PAC
+Dans le "configuration.yaml", ajouter la liste button comme ci-dessous
+````
+
+   ############################################################
+   ##                         MQTT                           ##
+   ############################################################
+mqtt:
+    cover: !include cover/volet.yaml
+    sensor: !include mqtt/mqtt.yaml
+    button: !include mqtt/button.yaml
+    climate: !include mqtt/climate.yaml
+````
+
+Puis creer le fichier "climate.yaml" dans le dossier "mqtt"
+
+et ajouter le contenu suivant : 
+
+````
+   ############################################################
+   ##                         MQTT  BSB LAN                  ##
+   ############################################################
+        - name: "Pompe à chaleur"
+          payload_on: 1
+          payload_off: 0
+          modes:
+            - auto
+            - heat
+            - cool
+            - 'off'
+          mode_state_topic: "BSB-LAN/700.00"
+          mode_state_template: >-
+             {% set values = { '0 - Mode protection':'off', '1 - Automatique':'auto', '2 - Réduit':'cool', '3 - Confort':'heat'} %}
+             {{ values[value] if value in values.keys() else 'off' }}
+          mode_command_topic: "BSB-LAN"
+          mode_command_template: >-
+             {% set values = { 'off':'S700=0', 'auto':'S700=1', 'cool':'S700=2', 'heat':'S700=3'} %}
+             {{ values[value] if value in values.keys() else '0' }}
+          current_temperature_topic: "BSB-LAN/8740.00"
+          min_temp: 17
+          max_temp: 24
+          temp_step: 0.5
+          temperature_state_topic: "BSB-LAN/710.00"
+          temperature_command_topic: "BSB-LAN"
+          temperature_command_template: "{{'S710='+ (value| string)}}"
+````
+
+Explication :  
+voici la doc : https://www.home-assistant.io/integrations/climate.mqtt/
+
+mode_state_topic: rubrique retournant le mode de chauffage
+mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
+mode_command_topic : topic a appeler pour l'envoi d'un message
+mode_command_template :  template pour convertir le choix sur HA en code connu bsb-lan
+current_temperature_topic : rubrique retournant la température courante (thermosat)
+min_temp: pour définir la température min selectionnable
+max_temp :  pour définir la température max selectionnable
+temp_step : precision à 0.5 degrés
+temperature_state_topic: rubrique retournant la température de consigne confort paramétrée
+temperature_command_topic : topic à appeler pour l'envoi d'un message
+temperature_command_template :  template pour convertir la température selectionnée en message de mise à jour bsb-lan
+
+Le resultat en image 
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateoff.JPG)![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateauto.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatechauffe.JPG)![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatereduit.JPG)
+
 
 
 ## Retours perso
