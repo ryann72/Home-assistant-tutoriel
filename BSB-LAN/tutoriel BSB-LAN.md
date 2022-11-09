@@ -311,8 +311,11 @@ temperature_command_topic : topic à appeler pour l'envoi d'un message
 temperature_command_template :  template pour convertir la température selectionnée en message de mise à jour bsb-lan
 
 Le resultat en image 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateoff.JPG)![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateauto.JPG)
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatechauffe.JPG)![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatereduit.JPG)
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateoff.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climateauto.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatechauffe.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/climatereduit.JPG)
 
 
 
