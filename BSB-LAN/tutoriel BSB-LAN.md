@@ -28,11 +28,11 @@ On y va ?
 
 ## Prérequis / Installation des modules
 Avoir Mosquitto broker d'installé
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/Mosquitto.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto.JPG)
 
 J'utilise la configuration par défaut du module
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/Mosquitto1.JPG)
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/Mosquitto2.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto1.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto2.JPG)
 
 
 
@@ -44,7 +44,7 @@ Dans mon cas, j'utilise la version ESP32 : https://1coderookie.github.io/BSB-LPB
 Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me pousse les valeurs toutes les X secondes et lors de changements.
 
 
-###Etape 1 :
+### Etape 1 :
 
 Creer ou réutiliser un utilisateur home assitant pour permettre l'authentification MQTT.
 Dans homme assistant aller dans Paramètre\Personnes puis onglet utilisateur
@@ -53,7 +53,7 @@ et compléter comme ci-dessous :
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/utilisateur.JPG)
 
 
-###Etape 2 :
+### Etape 2 :
 
 Dans Paramètre \ Integration s'assurer de bien avoir l'intégration MQTT, sinon l'ajouter 
 broker : localhost
@@ -63,7 +63,7 @@ mot de passe : idem celui lié a l'utilisateur
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haintegration.JPG)
 
 
-###Etape 3 :
+### Etape 3 :
 
 Tu dois à présent paramétrer le module BSB-LAN
 Depuis un navigateur web : http://bsb-lan.local/
@@ -96,7 +96,7 @@ Se connecter avec le user / mot de passe sur l'adresse ip du brocker mqtt et nor
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.jpg)
 
 
-###Etape 4: 
+### Etape 4: 
 
 Tu vas pouvoir récupérer les données dans Home assistant.
 
@@ -188,7 +188,7 @@ Voici un exemple rapide :
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.jpg)
 
 
-###Etape 5 : 
+### Etape 5 : 
 
 La modification depuis home assistant 
 
