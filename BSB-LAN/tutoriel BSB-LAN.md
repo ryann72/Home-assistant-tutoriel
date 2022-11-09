@@ -232,7 +232,7 @@ entity_category : dit que tu agit sur de la configuration
      availability:
         - topic: "BSB-LAN/status" permet de gerer si sensor non disponible
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat2.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat2.JPG)
 
 
 ## Retours persos
