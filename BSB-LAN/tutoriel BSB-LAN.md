@@ -367,6 +367,7 @@ state_on: valeur transmise par bsb-lan et à interpreter pour rendre l'interrupt
 state_off :  valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur désactivé
 
 et en image dans HA
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/switch.JPG)
 
 ### Etape 8 : 
@@ -376,7 +377,9 @@ Libre à vous de creer des automatisations.
 Voici mes quelques idées : 
 
 Changement de mode avec activation de l'alarme
+
 Changement de mode sur absence programmé dans l'agenda
+
 Changement de mode si fenêtre ouverte depuis plus de x minutes
 
 
