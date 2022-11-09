@@ -319,7 +319,65 @@ Le resultat en image
 
 
 
-## Retours perso
+### Etape 7 : 
+
+Et puisque je suis sympa, on va creer un switch pour allumer ou éteindre la production d'eau chaude
+
+Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous
+la configuration s'étoffe au fil du tuto
+````
+
+   ############################################################
+   ##                         MQTT                           ##
+   ############################################################
+mqtt:
+    cover: !include cover/volet.yaml
+    sensor: !include mqtt/mqtt.yaml
+    button: !include mqtt/button.yaml
+    climate: !include mqtt/climate.yaml
+    switch: !include mqtt/switch.yaml
+````
+
+Puis creer le fichier "switch.yaml" dans le dossier "mqtt"
+
+et ajouter le contenu suivant : 
+
+````
+      ############################################################
+   ##                         MQTT  BSB LAN                  ##
+   ############################################################
+    - name: "Activation ECS"
+      state_topic: "BSB-LAN/1600.00"
+      command_topic: "BSB-LAN"
+      payload_on: "S1600=1"
+      payload_off: "S1600=0"
+      state_on: "1 - Marche"
+      state_off: "0 - Arrêt"
+````
+
+Explication :  
+voici la doc : https://www.home-assistant.io/integrations/switch.mqtt/
+
+state_topic: rubrique retournant le mode de production d'eau chaude
+mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
+command_topic : topic a appeler pour l'envoi d'un message
+payload_on : valeur à transmettre à l'activation du switch
+payload_off : valeur à transmettre à la désactivation du switch
+state_on: valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur actif
+state_off :  valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur désactivé
+
+et en image dans HA
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/switch.JPG)
+
+### Etape 8 : 
+
+Vous pouvez a présent modifier toutes sortes de valeurs et les afficher.
+Libre à vous de creer des automatisations.
+Voici mes quelques idées : 
+
+Changement de mode avec activation de l'alarme
+Changement de mode sur absence programmé dans l'agenda
+Changement de mode si fenêtre ouverte depuis plus de x minutes
 
 
 ## Le mot de la fin
