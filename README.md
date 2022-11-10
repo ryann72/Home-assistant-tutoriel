@@ -29,10 +29,10 @@ Le sixième traite de l'integration BSB-LAN
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/tutoriel%20BSB-LAN.md 
 
 
-# Ma configuration personnelle 
+# Ma configuration 
 
 
-## SETUP 
+## Setup 
 
 - Mini pc HP I3 serie 4 + SSD + 8Go de ram sous proxmox avec VM HAOS
 - Clé USB slaesh sous zigbee2Mqtt
@@ -63,7 +63,7 @@ Bluetooth
 
 
 Wifi
-- Eclairage : Yeelight, spot et bande Tuya flashé sous tasmota
+- Eclairage : Yeelight, spot et bande led Tuya flashé sous tasmota
 - TV LG Oled
 - Google home mini 
 - Sonos play 5 serie 1
