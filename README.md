@@ -29,9 +29,8 @@ Le sixième traite de l'integration BSB-LAN
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/tutoriel%20BSB-LAN.md 
 
 
-# Ma configuration personnelle :
+# Ma configuration personnelle 
 
----------------------
 
 ## SETUP 
 
@@ -79,7 +78,7 @@ Wifi
 Ethernet :
 - PC Fixe
 
-
+# Remerciement 
 Si vous aimez quelque chose ici, likez 🌟 mon repo !!!
 
 Et si en plus vous souhaitez m'offrir une petite bière 🍺 ou un café ☕️ :  https://www.paypal.com/paypalme/YannRitter
