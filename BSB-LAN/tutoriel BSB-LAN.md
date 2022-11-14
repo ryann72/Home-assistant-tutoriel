@@ -93,7 +93,7 @@ Tu vas pouvoir contrôler les remontés graces à l'application MQTT explorer pa
 http://mqtt-explorer.com/
 
 Se connecter avec le user / mot de passe sur l'adresse ip du brocker mqtt et normalement les paramètres s'affiche au bout de max 30 secondes si tu as copié ma configuration bsb lan.
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.JPG)
 
 
 ### Etape 4: 
@@ -102,7 +102,7 @@ Tu vas pouvoir récupérer les données dans Home assistant.
 
 Dans le fichier configuration.yaml ajouter 
 tel que ci-dessous :
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/configurationha1.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/configurationha1.JPG)
 
 
 ````
@@ -185,7 +185,7 @@ Sauvegarder la configuration puis redémarrer home assistant pour prise en compt
 
 Tu as maintenant les valeurs disponibles dans des sensors pour home assistant
 Voici un exemple rapide : 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.JPG)
 
 
 ### Etape 5 : 
