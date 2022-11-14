@@ -196,10 +196,10 @@ Je vais à present tester la modification d'une valeur via MQTT pour passer du m
 
 pour ce faire, je dois envoyer "1" sur le paramètre "700".
 Depuis l'intagration MQTT, il est possible de tester la publication d'un paquet
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquet.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquet.JPG)
 
 Tu peux constater que le mode de chauffage à basculé en mode automatique
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquetresultat.jpg)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquetresultat.JPG)
 
 Je vais te montrer comment changer l'état depuis un bouton virtuel dans HA
 
