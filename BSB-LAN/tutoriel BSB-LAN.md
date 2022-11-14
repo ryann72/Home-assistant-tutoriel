@@ -46,9 +46,9 @@ Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me 
 
 ### Etape 1 :
 
-Creer ou réutiliser un utilisateur home assitant pour permettre l'authentification MQTT.
-Dans homme assistant aller dans Paramètre\Personnes puis onglet utilisateur
-Cliquer le bouton creer un utilisateur
+Créer ou réutiliser un utilisateur home assitant pour permettre l'authentification MQTT.
+Dans home assistant aller dans Paramètre\Personnes puis onglet utilisateur
+Cliquer le bouton créer un utilisateur
 et compléter comme ci-dessous :
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/utilisateur.JPG)
 
@@ -58,7 +58,7 @@ et compléter comme ci-dessous :
 Dans Paramètre \ Integration s'assurer de bien avoir l'intégration MQTT, sinon l'ajouter 
 broker : localhost
 port : 1883
-utilisateur : celui cree précédemment
+utilisateur : celui créé précédemment
 mot de passe : idem celui lié a l'utilisateur
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haintegration.JPG)
 
@@ -215,7 +215,7 @@ mqtt:
      
 ````
 
-Puis creer le fichier "button.yaml" dans le dossier "mqtt"
+Puis créer le fichier "button.yaml" dans le dossier "mqtt"
 
 et ajouter le contenu suivant : 
 
@@ -262,7 +262,7 @@ mqtt:
     climate: !include mqtt/climate.yaml
 ````
 
-Puis creer le fichier "climate.yaml" dans le dossier "mqtt"
+Puis créer le fichier "climate.yaml" dans le dossier "mqtt"
 
 et ajouter le contenu suivant : 
 
@@ -321,7 +321,7 @@ Le resultat en image
 
 ### Etape 7 : 
 
-Et puisque je suis sympa, on va creer un switch pour allumer ou éteindre la production d'eau chaude
+Et puisque je suis sympa, on va créer un switch pour allumer ou éteindre la production d'eau chaude
 
 Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous
 la configuration s'étoffe au fil du tuto
@@ -338,7 +338,7 @@ mqtt:
     switch: !include mqtt/switch.yaml
 ````
 
-Puis creer le fichier "switch.yaml" dans le dossier "mqtt"
+Puis créer le fichier "switch.yaml" dans le dossier "mqtt"
 
 et ajouter le contenu suivant : 
 
@@ -373,7 +373,7 @@ et en image dans HA
 ### Etape 8 : 
 
 Vous pouvez a présent modifier toutes sortes de valeurs et les afficher.
-Libre à vous de creer des automatisations.
+Libre à vous de crer des automatisations.
 Voici mes quelques idées : 
 
 Changement de mode avec activation de l'alarme
