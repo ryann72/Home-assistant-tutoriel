@@ -2,18 +2,20 @@
 Yann RITTER Tuto Home Assistant 
 
 Quand le contrôle de la PAC devient possible!
-Intégration d'une pompe à chaleur Atlantic Alfea extentia duo
+Intégration d'une pompe à chaleur Atlantic Alfea extentia duo (modèle de 2015 non AI)
 
 ## Compatibilité
-Voir la liste disponible ici : https://github.com/fredlcore/BSB-LAN
+Voir la liste des appareils compatibles  : https://github.com/fredlcore/BSB-LAN
 
 
-Un petit tuto qui explique les étapes clés et les détails importants afin d'intégrer votre moyen de chauffage dans home assistant.
+Un petit tuto qui explique les étapes clés et les détails importants afin d'intégrer ton moyen de chauffage dans home assistant.
+
 Je remercie Frederik initiateur du projet pour ces travaux et sa réactivité.
+
 Le git du projet  : https://github.com/fredlcore/BSB-LAN
 
 
-Je ne suis pas le DEV des intégrations nécessaires, mais juste un passionné ayant assimilé la technique et les différentes manipulations et je souhaite vous aider en partageant tout ça ! 😉
+Je ne suis pas le DEV des intégrations nécessaires, mais juste un passionné ayant assimilé la technique et les différentes manipulations et je souhaite t'aider en partageant tout ça ! 😉
 
 ## Avertissement 
 
@@ -28,9 +30,11 @@ On y va ?
 
 ## Prérequis / Installation des modules
 Avoir Mosquitto broker d'installé
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto.JPG)
 
 J'utilise la configuration par défaut du module
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto1.JPG)
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto2.JPG)
 
@@ -43,23 +47,23 @@ Si oui, tu peux continuer la lecture.
 
 Dans mon cas, j'utilise la version ESP32 : https://1coderookie.github.io/BSB-LPB-LAN_EN/QSG_ESP32.html
 
-Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me pousse les valeurs toutes les X secondes et lors de changements.
+Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me pousse les valeurs toutes les X secondes et lors de changements demandés en MQTT.
 
 
 ### Etape 1 :
 
 Créer ou réutiliser un utilisateur home assistant pour permettre l'authentification MQTT.
 
-Dans home assistant aller dans Paramètre\Personnes puis onglet utilisateur
+Dans home assistant vas dans Paramètre \ Personnes puis dans onglet utilisateur
 
-Cliquer le bouton créer un utilisateur et compléter comme ci-dessous :
+Clique sur le bouton créer un utilisateur et compléte comme ci-dessous :
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/utilisateur.JPG)
 
 
 ### Etape 2 :
 
-Dans Paramètre \ Intégration s'assurer de bien avoir l'intégration MQTT, sinon l'ajouter 
+Dans Paramètre \ Intégration assure toi de bien avoir l'intégration MQTT, sinon ajoute la. 
 
  - broker : localhost
  - port : 1883
@@ -74,7 +78,8 @@ Dans Paramètre \ Intégration s'assurer de bien avoir l'intégration MQTT, sino
 Tu dois à présent paramétrer le module BSB-LAN
 
 Depuis un navigateur web : http://bsb-lan.local/
-la page suivante doit s'afficher
+
+La page suivante doit s'afficher
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/bsblan0.JPG)
 
@@ -99,7 +104,7 @@ Puis tu vas modifier les paramètres spécifiques MQTT
 Tu vas pouvoir contrôler les remontées graces à l'application MQTT explorer par exemple :
 http://mqtt-explorer.com/
 
-Se connecter avec le user / mot de passe sur l'adresse ip du broker MQTT et normalement les paramètres s'affiche au bout de max 30 secondes, si tu as copié ma configuration bsb lan.
+Connecte toi avec le user / mot de passe sur l'adresse ip du broker MQTT et normalement les paramètres s'affiche au bout de max 30 secondes, si tu as copié ma configuration bsb lan.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.JPG)
 
@@ -193,7 +198,7 @@ Sauvegarde la configuration puis redémarrer home assistant pour prise en compte
 
 Tu as maintenant les valeurs disponibles dans des sensors pour home assistant.
 
-Voici un exemple rapide : 
+Voici un exemple : 
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.JPG)
 
