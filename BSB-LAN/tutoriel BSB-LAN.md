@@ -279,7 +279,7 @@ mqtt:
 
 Puis créer le fichier "climate.yaml" dans le dossier "mqtt"
 
-et ajouter le contenu suivant : 
+et ajoute le contenu suivant : 
 
 ````
    ############################################################
@@ -311,19 +311,20 @@ et ajouter le contenu suivant :
 ````
 
 Explication :  
+
 voici la doc : https://www.home-assistant.io/integrations/climate.mqtt/
 
-mode_state_topic: rubrique retournant le mode de chauffage
-mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
-mode_command_topic : topic a appeler pour l'envoi d'un message
-mode_command_template :  template pour convertir le choix sur HA en code connu bsb-lan
-current_temperature_topic : rubrique retournant la température courante (thermosat)
-min_temp: pour définir la température min selectionnable
-max_temp :  pour définir la température max selectionnable
-temp_step : precision à 0.5 degrés
-temperature_state_topic: rubrique retournant la température de consigne confort paramétrée
-temperature_command_topic : topic à appeler pour l'envoi d'un message
-temperature_command_template :  template pour convertir la température selectionnée en message de mise à jour bsb-lan
+ - mode_state_topic: rubrique retournant le mode de chauffage
+ - mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode réduit (éco)
+ - mode_command_topic : topic à appeler pour l'envoi d'un message
+ - mode_command_template :  template pour convertir le choix sur HA en code connu bsb-lan
+ - current_temperature_topic : rubrique retournant la température courante (thermostat)
+ - min_temp: pour définir la température min sélectionnable
+ - max_temp :  pour définir la température max sélectionnable
+ - temp_step : précision par palier de 0.5 degrés
+ - temperature_state_topic: rubrique retournant la température de consigne confort paramétrée
+ - temperature_command_topic : topic à appeler pour l'envoi d'un message
+ - temperature_command_template : template pour convertir la température sélectionnée en message de mise à jour bsb-lan
 
 Le resultat en image 
 
@@ -338,8 +339,9 @@ Le resultat en image
 
 Et puisque je suis sympa, on va créer un switch pour allumer ou éteindre la production d'eau chaude
 
-Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous
-la configuration s'étoffe au fil du tuto
+Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous :
+
+La configuration s'étoffe au fil du tuto
 ````
 
    ############################################################
@@ -355,7 +357,7 @@ mqtt:
 
 Puis créer le fichier "switch.yaml" dans le dossier "mqtt"
 
-et ajouter le contenu suivant : 
+et ajoute le contenu suivant : 
 
 ````
       ############################################################
@@ -371,34 +373,36 @@ et ajouter le contenu suivant :
 ````
 
 Explication :  
-voici la doc : https://www.home-assistant.io/integrations/switch.mqtt/
 
-state_topic: rubrique retournant le mode de production d'eau chaude
-mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
-command_topic : topic a appeler pour l'envoi d'un message
-payload_on : valeur à transmettre à l'activation du switch
-payload_off : valeur à transmettre à la désactivation du switch
-state_on: valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur actif
-state_off :  valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur désactivé
+Le lien de la doc officiel : https://www.home-assistant.io/integrations/switch.mqtt/
 
-et en image dans HA
+ - state_topic: rubrique retournant le mode de production d'eau chaude
+ - command_topic : topic à appeler pour l'envoi d'un message
+ - payload_on : valeur à transmettre à l'activation du switch
+ - payload_off : valeur à transmettre à la désactivation du switch
+ - state_on: valeur transmise par bsb-lan et à interpréter pour rendre l'interrupteur actif
+ - state_off : valeur transmise par bsb-lan et à interpréter pour rendre l'interrupteur désactivé
+
+En image dans HA
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/switch.JPG)
 
 ### Etape 8 : 
 
-Vous pouvez a présent modifier toutes sortes de valeurs et les afficher.
-Libre à vous de crer des automatisations.
+Tu peux à présent modifier toutes sortes de valeurs et les afficher.
+
+Libre à toi de créer des automatisations.
+
+
 Voici mes quelques idées : 
 
-Changement de mode avec activation de l'alarme
-
-Changement de mode sur absence programmé dans l'agenda
-
-Changement de mode si fenêtre ouverte depuis plus de x minutes
+ - Changement de mode avec activation de l'alarme
+ - Changement de mode sur absence programmé dans l'agenda
+ - Changement de mode si fenêtre ouverte depuis plus de x minutes
 
 
 ## Le mot de la fin
+
 Une petite doc, un tuto, qui je l'espère t’a aidé le mieux possible.
 Je l'ai réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
