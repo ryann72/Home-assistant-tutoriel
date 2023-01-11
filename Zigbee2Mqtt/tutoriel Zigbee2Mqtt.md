@@ -169,11 +169,11 @@ Exemple avec un capteur aqara de porte et fenêtre
 
 Depuis le menu : Paramètres → Appareils et services → onglet integration → MQTT → appareils
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt8.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt19.JPG)
 
 et dans le detail de l'appareil
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt9.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt20.JPG)
 
 
 ## Une automatisation 
