@@ -152,7 +152,7 @@ Paramètres → Modules complementaires → zigbee2mqtt → ouvrir l'interface u
 
 et cliquer sur activer l'appairage 
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt14.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt14.jpg)
 
 
 Puis il faut manipuler le capteur en général 3/5seconde sur le bouton pour realiser l'association.
