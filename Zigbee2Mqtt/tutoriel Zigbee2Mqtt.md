@@ -46,7 +46,7 @@ Par exemple :
 - Confirmer le mot de passe : 123456
 - Décocher l'option : administrateur
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/utilisateur.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/utilisateur1.JPG)
 
 
 ## Installation des addons
