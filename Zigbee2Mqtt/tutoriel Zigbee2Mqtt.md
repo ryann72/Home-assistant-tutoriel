@@ -191,7 +191,7 @@ Puis dans le déclencheur :
 
 - choisir état comme type de déclencheur
 - choisir le sensor provenant de zigbee2mqtt
-- definir le changement d'état ici sur une ouverture donc on
+- definir le changement d'état ici sur un changement de température au dessus de 20 degrés
 
 Ajouter les conditions souhaités
 Ajouter les actions
@@ -199,7 +199,7 @@ Ajouter les actions
 Sauvegarde et teste ton automatisation.
 
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt10.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt21.JPG)
 
 
 
