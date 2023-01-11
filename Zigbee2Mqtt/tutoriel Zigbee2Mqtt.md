@@ -56,7 +56,7 @@ Tu vas devoir utiliser Zigbee2mqtt et Mosquitto broker
 
 ### Ajout de Mosquitto broker
 
-Navigue dans le menu : Supervisor → Add-on store → Mosquitto broker → installer
+Navigue dans le menu : Paramètres → Modules complementaires → Mosquitto broker → installer
 
 Tu devras alors configurer le broker tel que la capture ci-dessous.
 
@@ -67,7 +67,7 @@ Tu peux démarrer l'addon.
 
 ### Ajout de Zigbee2Mqtt
 
-Tu devras ajouter l'url du repository pour zigbee2mqtt : Supervisor → Add-on store → ⋮ → Manage add-on repositories
+Tu devras ajouter l'url du repository pour zigbee2mqtt : Paramètres → Modules complementaires → Boutique des modules complémentaires → ⋮ → Manage add-on repositories
 
 Ajoute l'URL suivante : https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 
@@ -98,14 +98,14 @@ Le user et le password doivent correspondre à l'utilisateur crée précédement
 Le port correspond à l'identifiant matériel de la clé zigbee (il faut qu'elle soit connectée sur un port USB du PI de preférence avec une rallonge USB pour limiter les interférences)
 
 
-Pour l'obtenir il faut naviguer dans Supervisor → System → Host → ⋮ → Hardware
+Pour l'obtenir il faut naviguer dans Paramètres → Système → Matériel → ⋮ → Tour le materiel
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt4.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt13.JPG)
 
 
 Si je récapitule, tu devrais avoir :
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt3.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt12.JPG)
 
 
 Si oui tu peux sauvegarder la configuration et demarrer l'addon.
@@ -114,14 +114,25 @@ Dans les logs de l'addon, tu auras alors le lancement de l'addon sans erreur.
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt5.JPG)
 
+Il faut maintenant configurer pour l'exposition dans home assistant 
+
+Paramètres → Modules complementaires → zigbee2mqtt → ouvrir l'interface utilisateur web 
+
+Naviguer ensuite dans Paramètres (du module zigbee2mqtt) → Integration Home assistant 
+
+et renseigner comme dans la capture ci-dessous.
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt15.JPG)
+
 
 
 ## Configuration de l'integration pour la decouverte automatique 
 
-Dans le menu Configuration → Intégration → ajouter l'intégration → rechercher MQTT
+Dans le menu Paramètres → Appareils et services → onglet integration → ajouter une intégration → rechercher MQTT
 Configuration : 
 
-- host : localhost
+- brocker : core-mosquitto
+- port : 1883
 - user : zigbeemqtt
 - mot de passe : 123456
 
@@ -137,32 +148,26 @@ Tu trouveras ici la liste des peripheriques compatibles :  https://www.zigbee2mq
 
 Pour pouvoir associer un périphérique zigbee, il est nécessaire d'activer la decouverte dans l'addon zigbee2mqtt
 
-Modifier la valeur → permit_join: true
+Paramètres → Modules complementaires → zigbee2mqtt → ouvrir l'interface utilisateur web 
 
-Sauvegarder la configuration
+et cliquer sur activer l'appairage 
 
-Redemarrer l'addon.
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt14.JPG)
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt11.jpg)
 
 Puis il faut manipuler le capteur en général 3/5seconde sur le bouton pour realiser l'association.
 
 
 
-Pour une question de securité, il est conseillé de remettre à false une fois les péripheriques ajoutés 
+Pour une question de securité, il est conseillé de desactiver l'appairage après l'ajout effectué, à defaut, il se désactive au bout de 3 minutes.
 
-permit_join: false
-
-Sauvegarder la configuration
-
-Redemarrer l'addon.
 
 
 ## Un exemple d'appareils découvert
 
 Exemple avec un capteur aqara de porte et fenêtre 
 
-Depuis le menu : Configuration → Intégration → MQTT → appareils
+Depuis le menu : Paramètres → Appareils et services → onglet integration → MQTT → appareils
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt8.JPG)
 
@@ -175,7 +180,7 @@ et dans le detail de l'appareil
 
 Je poursuis avec un exemple d'automatisation avec ce capteur comme déclencheur
 
-Dans le menu : Configuration → Automatisations → ajouter une automatisation → commencer par une automatisation vide
+Dans le menu : Paramètres → Automatisations et scènes → créer une automatisation → commencer par une automatisation vide
 
 
 Définir :
