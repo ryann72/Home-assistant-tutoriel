@@ -60,7 +60,7 @@ Navigue dans le menu : Paramètres → Modules complementaires → Mosquitto bro
 
 Tu devras alors configurer le broker tel que la capture ci-dessous.
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/mosquitto.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt16.JPG)
 
 Tu peux démarrer l'addon.
 
@@ -73,11 +73,11 @@ Ajoute l'URL suivante : https://github.com/zigbee2mqtt/hassio-zigbee2mqtt
 
 Celle-ci est obsolète : https://github.com/danielwelch/hassio-zigbee2mqtt
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt1.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt17.JPG)
 
 Maintenant, tu trouveras dans les addons disponibles Zigbee2Mqtt
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt2.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt18.JPG)
 
 Clique dessus, puis installer.
 
@@ -122,7 +122,7 @@ Naviguer ensuite dans Paramètres (du module zigbee2mqtt) → Integration Home a
 
 et renseigner comme dans la capture ci-dessous.
 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt15.JPG)
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Zigbee2Mqtt/Images/zigbee2mqtt15.jpg)
 
 
 
