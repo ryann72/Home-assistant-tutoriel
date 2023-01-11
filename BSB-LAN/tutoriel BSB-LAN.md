@@ -2,18 +2,20 @@
 Yann RITTER Tuto Home Assistant 
 
 Quand le contrôle de la PAC devient possible!
-Intégration d'une pompe à chaleur Atlantic Alfea extentia duo
+Intégration d'une pompe à chaleur Atlantic Alfea extentia duo (modèle de 2015 non AI)
 
 ## Compatibilité
-Voir la liste disponible ici : https://github.com/fredlcore/BSB-LAN
+Voir la liste des appareils compatibles  : https://github.com/fredlcore/BSB-LAN
 
 
-Un petit tuto qui explique les étapes clés et les détails importants afin d'intégrer votre moyen de chauffage dans home assistant.
+Un petit tuto qui explique les étapes clés et les détails importants afin d'intégrer ton moyen de chauffage dans home assistant.
+
 Je remercie Frederik initiateur du projet pour ces travaux et sa réactivité.
+
 Le git du projet  : https://github.com/fredlcore/BSB-LAN
 
 
-Je ne suis pas le DEV des intégrations nécessaires, mais juste un passionné ayant assimilé la technique et les différentes manipulations et je souhaite vous aider en partageant tout ça ! 😉
+Je ne suis pas le DEV des intégrations nécessaires, mais juste un passionné ayant assimilé la technique et les différentes manipulations et je souhaite t'aider en partageant tout ça ! 😉
 
 ## Avertissement 
 
@@ -28,9 +30,11 @@ On y va ?
 
 ## Prérequis / Installation des modules
 Avoir Mosquitto broker d'installé
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto.JPG)
 
 J'utilise la configuration par défaut du module
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto1.JPG)
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mosquitto2.JPG)
 
@@ -39,39 +43,47 @@ J'utilise la configuration par défaut du module
 Tu as un système de chauffage compatible et acheté / branché la carte à ton système de chauffage ?
 Sinon, tu peux consulter le git du projet (https://github.com/fredlcore/BSB-LAN) et tu peux contacter Frederik par e-mail en Allemand ou Anglais à l'adresse suivante : bsb@code-it.de
 
-Si oui, tu peux continuer la lecture
+Si oui, tu peux continuer la lecture.
+
 Dans mon cas, j'utilise la version ESP32 : https://1coderookie.github.io/BSB-LPB-LAN_EN/QSG_ESP32.html
-Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me pousse les valeurs toutes les X secondes et lors de changements.
+
+Et je souhaite faire communiquer le module BSB-LAN via MQTT, ainsi le module me pousse les valeurs toutes les X secondes et lors de changements demandés en MQTT.
 
 
 ### Etape 1 :
 
-Creer ou réutiliser un utilisateur home assitant pour permettre l'authentification MQTT.
-Dans homme assistant aller dans Paramètre\Personnes puis onglet utilisateur
-Cliquer le bouton creer un utilisateur
-et compléter comme ci-dessous :
+Créer ou réutiliser un utilisateur home assistant pour permettre l'authentification MQTT.
+
+Dans home assistant vas dans Paramètre \ Personnes puis dans onglet utilisateur
+
+Clique sur le bouton créer un utilisateur et compléte comme ci-dessous :
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/utilisateur.JPG)
 
 
 ### Etape 2 :
 
-Dans Paramètre \ Integration s'assurer de bien avoir l'intégration MQTT, sinon l'ajouter 
-broker : localhost
-port : 1883
-utilisateur : celui cree précédemment
-mot de passe : idem celui lié a l'utilisateur
+Dans Paramètre \ Intégration assure toi de bien avoir l'intégration MQTT, sinon ajoute la. 
+
+ - broker : localhost
+ - port : 1883
+ - utilisateur : celui créé précédemment
+ - mot de passe : idem celui lié à l'utilisateur
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haintegration.JPG)
 
 
 ### Etape 3 :
 
 Tu dois à présent paramétrer le module BSB-LAN
+
 Depuis un navigateur web : http://bsb-lan.local/
-la page suivante doit s'afficher
+
+La page suivante doit s'afficher
+
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/bsblan0.JPG)
 
-Clique ensuite sur le menu Setting 
-et modifie les paramètres suivants :
+Clique ensuite sur le menu Setting et modifie les paramètres suivants :
  - La configuration avancée va permettre de saisir le paramétrage MQTT.
  - Le write access lui de permettre la modification depuis l'interface web et MQTT / HTTP
 
@@ -79,30 +91,31 @@ et modifie les paramètres suivants :
 
 Puis tu vas modifier les paramètres spécifiques MQTT
 
-Logging mode --> activer le mqtt
-Interval (seconds) --> délais maxi entre chaque remontés
-Parameters --> liste des paramètre que vous souhaitez remonter / utiliser dans HA la liste complete est disponible via le menu Heater Function
-Usage --> format du message mqtt, le plus simple (plain text)
-IP address broker --> l'adresse ip de votre serveur mosquitto (dans mon cas mon instance HA)
-username --> nom d'utilisateur pour la connexion MQTT, donc celui créé a l'étape précédente dans HA
-Password --> le mot de passe associé à l'utilisateur
+ - Logging mode --> activer le mqtt
+ - Interval (seconds) --> délais maxi entre chaque remontées
+ - Parameters --> liste des paramètres que tu souhaites remonter / utiliser dans HA la liste complete est disponible via le menu Heater Function
+ - Usage --> format du message mqtt, le plus simple (plain text)
+ - IP address broker --> l'adresse ip de ton serveur mosquitto (dans mon cas mon instance HA)
+ - username --> nom d'utilisateur pour la connexion MQTT, donc celui créé à l'étape précédente dans HA
+ - Password --> le mot de passe associé à l'utilisateur
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/bsblan2.jpg)
 
-Tu vas pouvoir contrôler les remontés graces à l'application MQTT explorer par exemple
+Tu vas pouvoir contrôler les remontées graces à l'application MQTT explorer par exemple :
 http://mqtt-explorer.com/
 
-Se connecter avec le user / mot de passe sur l'adresse ip du brocker mqtt et normalement les paramètres s'affiche au bout de max 30 secondes si tu as copié ma configuration bsb lan.
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.jpg)
+Connecte toi avec le user / mot de passe sur l'adresse ip du broker MQTT et normalement les paramètres s'affiche au bout de max 30 secondes, si tu as copié ma configuration bsb lan.
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/mqttexplorer.JPG)
 
 
 ### Etape 4: 
 
 Tu vas pouvoir récupérer les données dans Home assistant.
 
-Dans le fichier configuration.yaml ajouter 
-tel que ci-dessous :
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/configurationha1.jpg)
+Dans le fichier configuration.yaml ajoute la configuration tel que ci-dessous :
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/configurationha1.JPG)
 
 
 ````
@@ -181,29 +194,34 @@ Et ajoute la configuration suivante pour permettre la remontée des paramètres 
       device_class: temperature
 ````
 
-Sauvegarder la configuration puis redémarrer home assistant pour prise en compte du paramétrage
+Sauvegarde la configuration puis redémarrer home assistant pour prise en compte du paramétrage
 
-Tu as maintenant les valeurs disponibles dans des sensors pour home assistant
-Voici un exemple rapide : 
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.jpg)
+Tu as maintenant les valeurs disponibles dans des sensors pour home assistant.
+
+Voici un exemple : 
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat1.JPG)
 
 
 ### Etape 5 : 
 
-La modification depuis home assistant 
+La modification depuis home assistant. 
 
-Je vais à present tester la modification d'une valeur via MQTT pour passer du mode hors-gel en mode automatique
+Je vais à present tester la modification d'une valeur via MQTT pour passer du mode hors-gel en mode automatique.
 
-pour ce faire, je dois envoyer "1" sur le paramètre "700".
-Depuis l'intagration MQTT, il est possible de tester la publication d'un paquet
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquet.jpg)
+Pour ce faire, je dois envoyer "1" sur le paramètre "700".
 
-Tu peux constater que le mode de chauffage à basculé en mode automatique
-![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquetresultat.jpg)
+Depuis l'intégration MQTT, il est possible de tester la publication d'un paquet.
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquet.JPG)
+
+Tu peux constater que le mode de chauffage a basculé en mode automatique.
+
+![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/testpaquetresultat.JPG)
 
 Je vais te montrer comment changer l'état depuis un bouton virtuel dans HA
 
-Dans le "configuration.yaml", ajouter la liste button comme ci-dessous
+Dans le "configuration.yaml", ajoute le lien button comme ci-dessous :
 ````
 
    ############################################################
@@ -215,9 +233,9 @@ mqtt:
      
 ````
 
-Puis creer le fichier "button.yaml" dans le dossier "mqtt"
+Puis créer le fichier "button.yaml" dans le dossier "mqtt"
 
-et ajouter le contenu suivant : 
+et ajoute le contenu suivant : 
 
 ````
 
@@ -237,19 +255,21 @@ et ajouter le contenu suivant :
 
 Explication :
  
-- command_topic : sujet a appeler 
-- payload_press : commande a envoyer lors du clique 
-- /S pour de la modification puis le code element a modifier = la valeur a renseigner
-- entity_category : dit que tu agit sur de la configuration
+- command_topic : sujet à appeler 
+- payload_press : commande à envoyer lors du clique 
+- /S pour de la modification puis le code element à modifier = la valeur à renseigner
+- entity_category : dit que tu agis sur de la configuration
      availability:
-        - topic: "BSB-LAN/status" permet de gerer si sensor non disponible
+        - topic: "BSB-LAN/status" permet de gérer l'état si le sensor est non disponible
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/haresultat2.JPG)
 
 ### Etape 6 : 
 
-La creation d'un thermosat mqtt pour le pilotage de la PAC
-Dans le "configuration.yaml", ajouter la liste button comme ci-dessous
+La création d'un thermosat MQTT pour le pilotage de la PAC
+
+Dans le "configuration.yaml", ajoute le lien climate comme ci-dessous :
+
 ````
 
    ############################################################
@@ -262,9 +282,9 @@ mqtt:
     climate: !include mqtt/climate.yaml
 ````
 
-Puis creer le fichier "climate.yaml" dans le dossier "mqtt"
+Puis créer le fichier "climate.yaml" dans le dossier "mqtt"
 
-et ajouter le contenu suivant : 
+et ajoute le contenu suivant : 
 
 ````
    ############################################################
@@ -296,19 +316,20 @@ et ajouter le contenu suivant :
 ````
 
 Explication :  
+
 voici la doc : https://www.home-assistant.io/integrations/climate.mqtt/
 
-mode_state_topic: rubrique retournant le mode de chauffage
-mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
-mode_command_topic : topic a appeler pour l'envoi d'un message
-mode_command_template :  template pour convertir le choix sur HA en code connu bsb-lan
-current_temperature_topic : rubrique retournant la température courante (thermosat)
-min_temp: pour définir la température min selectionnable
-max_temp :  pour définir la température max selectionnable
-temp_step : precision à 0.5 degrés
-temperature_state_topic: rubrique retournant la température de consigne confort paramétrée
-temperature_command_topic : topic à appeler pour l'envoi d'un message
-temperature_command_template :  template pour convertir la température selectionnée en message de mise à jour bsb-lan
+ - mode_state_topic: rubrique retournant le mode de chauffage
+ - mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode réduit (éco)
+ - mode_command_topic : topic à appeler pour l'envoi d'un message
+ - mode_command_template :  template pour convertir le choix sur HA en code connu bsb-lan
+ - current_temperature_topic : rubrique retournant la température courante (thermostat)
+ - min_temp: pour définir la température min sélectionnable
+ - max_temp :  pour définir la température max sélectionnable
+ - temp_step : précision par palier de 0.5 degrés
+ - temperature_state_topic: rubrique retournant la température de consigne confort paramétrée
+ - temperature_command_topic : topic à appeler pour l'envoi d'un message
+ - temperature_command_template : template pour convertir la température sélectionnée en message de mise à jour bsb-lan
 
 Le resultat en image 
 
@@ -321,10 +342,11 @@ Le resultat en image
 
 ### Etape 7 : 
 
-Et puisque je suis sympa, on va creer un switch pour allumer ou éteindre la production d'eau chaude
+Et puisque je suis sympa, on va créer un switch pour allumer ou éteindre la production d'eau chaude
 
-Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous
-la configuration s'étoffe au fil du tuto
+Dans le "configuration.yaml", ajouter la liste switch comme ci-dessous :
+
+La configuration s'étoffe au fil du tuto
 ````
 
    ############################################################
@@ -338,9 +360,9 @@ mqtt:
     switch: !include mqtt/switch.yaml
 ````
 
-Puis creer le fichier "switch.yaml" dans le dossier "mqtt"
+Puis créer le fichier "switch.yaml" dans le dossier "mqtt"
 
-et ajouter le contenu suivant : 
+et ajoute le contenu suivant : 
 
 ````
       ############################################################
@@ -356,34 +378,36 @@ et ajouter le contenu suivant :
 ````
 
 Explication :  
-voici la doc : https://www.home-assistant.io/integrations/switch.mqtt/
 
-state_topic: rubrique retournant le mode de production d'eau chaude
-mode_state_template : template pour convertir les réponses en mode connu home assistant, je n'ai rien trouvé d'autre que cool pour le mode reduit
-command_topic : topic a appeler pour l'envoi d'un message
-payload_on : valeur à transmettre à l'activation du switch
-payload_off : valeur à transmettre à la désactivation du switch
-state_on: valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur actif
-state_off :  valeur transmise par bsb-lan et à interpreter pour rendre l'interrupteur désactivé
+Le lien de la doc officiel : https://www.home-assistant.io/integrations/switch.mqtt/
 
-et en image dans HA
+ - state_topic: rubrique retournant le mode de production d'eau chaude
+ - command_topic : topic à appeler pour l'envoi d'un message
+ - payload_on : valeur à transmettre à l'activation du switch
+ - payload_off : valeur à transmettre à la désactivation du switch
+ - state_on: valeur transmise par bsb-lan et à interpréter pour rendre l'interrupteur actif
+ - state_off : valeur transmise par bsb-lan et à interpréter pour rendre l'interrupteur désactivé
+
+En image dans HA
 
 ![alt text](https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/Images/switch.JPG)
 
 ### Etape 8 : 
 
-Vous pouvez a présent modifier toutes sortes de valeurs et les afficher.
-Libre à vous de creer des automatisations.
+Tu peux à présent modifier toutes sortes de valeurs et les afficher.
+
+Libre à toi de créer des automatisations.
+
+
 Voici mes quelques idées : 
 
-Changement de mode avec activation de l'alarme
-
-Changement de mode sur absence programmé dans l'agenda
-
-Changement de mode si fenêtre ouverte depuis plus de x minutes
+ - Changement de mode avec activation de l'alarme
+ - Changement de mode sur absence programmé dans l'agenda
+ - Changement de mode si fenêtre ouverte depuis plus de x minutes
 
 
 ## Le mot de la fin
+
 Une petite doc, un tuto, qui je l'espère t’a aidé le mieux possible.
 Je l'ai réalisé avec plaisir dans un esprit d’entre-aide, bénévolement, en parallèle de mon métier et ma vie.
 Je n'assure pas le support de tous les problèmes mais je serais là si besoin sur le groupe, comme d’habitude.
