@@ -35,9 +35,9 @@ Disposer d'une clé zigbee compatible zigbee2mqtt
 la liste des compatibilités est disponible ici :  https://www.zigbee2mqtt.io/information/supported_adapters.html 
 
 ## Ajout d'un utilisateur pour MQTT
-Dans le menu configuration / utilisateurs
+Dans le menu Paramètres / Personnes
 
-Creer un nouvel utilisateur spécifique pour zigbee2mqtt.
+Ajouter un nouvelle personne spécifique pour zigbee2mqtt.
 
 Par exemple :
 - Nom : zigbeemqtt
