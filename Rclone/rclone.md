@@ -8,8 +8,8 @@ Par exemple des images / vidéos issues de vos caméras de surveillance.
 - Toutes versions de home-assistant
 - Testé à partir de la version 2023-03-06
 
-Un petit tuto qui explique les étapes clés et les détails importants afin de sauvegarder vos documents et images ... dans un cloud.
-
+## Intro
+Un petit tuto qui explique les étapes clés et les détails importants afin de sauvegarder vos documents et images ou vidéos  ... dans un cloud.
 
 Je ne suis pas le DEV des intégrations nécessaires.Je souhaite vous aider en partageant tout ça ! 😉
 
@@ -17,6 +17,7 @@ Je ne suis pas le DEV des intégrations nécessaires.Je souhaite vous aider en p
 ## Prérequis
 
 Choisir le cloud sur lequel sauvegarder vos données.
+
 La liste des clouds compatibles est disponible ici, il y en a une quarantaine : https://rclone.org/
 
 
@@ -25,12 +26,12 @@ La liste des clouds compatibles est disponible ici, il y en a une quarantaine : 
 ### Configuration du module 
 
 
-Dans mon cas j'ai choisi google drive
-Voici donc la procédure pour obtenir le client id / client secret et token
+Dans mon cas, j'ai choisi google drive/
 
-https://rclone.org/drive/#making-your-own-client-id
+Voici donc la procédure pour obtenir le client id / client secret et token: https://rclone.org/drive/#making-your-own-client-id
 
-A savoir que sous HAos, je n'ai pas réussi à générer le token
+A savoir que sous HAos, je n'ai pas réussi à générer le token malgré la solution remote SSH.
+
 J'ai donc fait une installation rclone sous windows afin de récupérer le fichier de configuration.
 
 ### Integration dans home-assistant 
@@ -38,8 +39,11 @@ J'ai donc fait une installation rclone sous windows afin de récupérer le fichi
 
 Dans mon cas j'utilise HAos, il n'est donc pas aussi simple d'installer et d'acceder au système linux.
 
+Je vous propose donc ma solution.
+
 Créer un fichier nommé par exemple : rclonePhotos.sh
-Le placer à la racine du dossier /config/ de home-assistant puis coller les élements suivants :
+Le placer à la racine du dossier /config/ de home-assistant puis coller les élements suivants
+
 '''
 #permets d'installer rclone
 apk add rclone
