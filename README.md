@@ -28,6 +28,9 @@ Le sixième traite de l'integration BSB-LAN
 
 https://github.com/ryann72/Home-assistant-tutoriel/blob/main/BSB-LAN/tutoriel%20BSB-LAN.md 
 
+Le septieme traite de la sauvegarde sur le cloud via rclone
+
+https://github.com/ryann72/Home-assistant-tutoriel/blob/main/Rclone/rclone.md 
 
 # Ma configuration 
 
@@ -69,11 +72,12 @@ Wifi
 - Sonos play 5 serie 1
 - Imprimante HP 
 - Aspirateurs : Roborock S50
-- Caméra
+- Caméra chinoise compatible rtsp
 - Interrupteur volet roulant flashé sous tasmota
 - ESP32 : BSB-LAN, Pzem, supervision electrique
 - Nintendo switch
-
+- Camera tapo C210
+- Reolink doorbell wifi
 
 Ethernet :
 - PC Fixe
