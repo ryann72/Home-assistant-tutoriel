@@ -11,14 +11,14 @@ Par exemple des images / vidéos issues de vos caméras de surveillance.
 ## Intro
 Un petit tuto qui explique les étapes clés et les détails importants afin de sauvegarder vos documents et images ou vidéos  ... dans un cloud.
 
-Je ne suis pas le DEV des intégrations nécessaires.Je souhaite vous aider en partageant tout ça ! 😉
+Je ne suis pas le DEV des intégrations nécessaires.Je souhaite juste vous aider en partageant tout ça ! 😉
 
 
 ## Prérequis
 
 Choisir le cloud sur lequel sauvegarder vos données.
 
-La liste des clouds compatibles est disponible ici, il y en a une quarantaine : https://rclone.org/
+La liste des clouds compatibles avec la solution proposé est disponible ici, il y en a une quarantaine : https://rclone.org/
 
 
 ## Mise en place 
@@ -26,13 +26,13 @@ La liste des clouds compatibles est disponible ici, il y en a une quarantaine : 
 ### Configuration du module 
 
 
-Dans mon cas, j'ai choisi google drive/
+Dans mon cas, j'ai choisi google drive.
 
-Voici donc la procédure pour obtenir le client id / client secret et token: https://rclone.org/drive/#making-your-own-client-id
+Voici donc la procédure pour obtenir le client id / client secret et token permettant a Rclone de deposer les fichiers : https://rclone.org/drive/#making-your-own-client-id
 
 A savoir que sous HAos, je n'ai pas réussi à générer le token malgré la solution remote SSH.
 
-J'ai donc fait une installation rclone sous windows afin de récupérer le fichier de configuration.
+J'ai donc fait une installation rclone sous windows afin de récupérer le fichier de configuration à integrer ensuite dans home assistant.
 
 ### Integration dans home-assistant 
 
@@ -74,7 +74,7 @@ Dans le fichier configuration.yaml
 
 Créer les commandes shell permettant de copier les fichiers
 
-Dans l'exemple ci-dessous la commande exécutera notre fichier script shell rclonePhotos.sh du dossier config avec en répertoire source : /media/Images et en destination un dossier photos à la racine de google drive.
+Dans l'exemple ci-dessous la première commande exécutera notre fichier script shell rclonePhotos.sh du dossier config avec en répertoire source : /media/Images et en destination un dossier photos à la racine de google drive.
 Cela effectuera alors la synchronisation de l'ensemble des medias du dossier Images vers google drive puis supprimera en local les fichiers de plus de 7 jours.
 
 Il est bien evidement possible de supprimer cette purge automatique ou de l'adapter en modifiant le rclonePhotos.sh.
@@ -89,7 +89,7 @@ shell_command:
 
 ###Exemple d'automatisation 
 
-Celle-ci permet de prendre une vidéo sur déclenchement d'un capteur d'ouverture de l'envoyer sur telegram puis d'uploader le fichier sur google-drive
+Je vous partage une de mes automatisation, celle-ci permet de prendre une vidéo sur déclenchement d'un capteur d'ouverture de l'envoyer sur telegram puis d'uploader le fichier sur google-drive.
 
 ```
 - alias: 'Prendre une video camera jardin'
@@ -126,3 +126,8 @@ Celle-ci permet de prendre une vidéo sur déclenchement d'un capteur d'ouvertur
               timeout: 180
     - service: shell_command.sauvegarde_google_drive_videos  
 ```
+
+# Remerciement 
+Si vous aimez mes tutos, likez 🌟 mon repo !
+
+Si vous souhaitez m'offrir une petite bière ou un café ou participer à l'investissement materiel :  https://www.paypal.com/paypalme/YannRitter  Merci !
