@@ -60,7 +60,7 @@ find "${1}" -depth -mindepth 1 -mtime +7 -delete
 Copier le fichier rclone.conf, dans mon cas généré depuis windows dans le dossier config/ de home-assistant
 
 Exemple de contenu du fichier rclone.conf
-'''
+```
 [google-drive]
 type = drive
 client_id = XXXXXXXXXX.apps.googleusercontent.com
@@ -68,8 +68,7 @@ scope = drive
 client_secret = YYYYYY-YYYYYYYYYYYYYYYYYYYYYYY
 token = {"access_token":"montoken","token_type":"Bearer","refresh_token":"montoken2","expiry":"2023-03-31T12:49:29.1598145+02:00"}
 team_drive = 
-
-'''
+```
 
 Dans le fichier configuration.yaml
 
@@ -82,17 +81,17 @@ Il est bien evidement possible de supprimer cette purge automatique ou de l'adap
 
 Mon espace cloud n'étant pas ilimité j'ai preféré garder environ 7 jours d'historique seulement. 
 
-'''
+```
 shell_command:
   sauvegarde_google_drive_images: /config/rclonePhotos.sh /media/Images google-drive:photos
   sauvegarde_google_drive_videos: /config/rclonePhotos.sh /media/Vidéos google-drive:videos
-'''
+```
 
 ###Exemple d'automatisation 
 
-Celle-ci permet de prendre une vidéo sur déclenchement d'un capteur d'ouverure
-de l'envoyer sur telegram puis d'uploader le fichier sur google-drive
-'''
+Celle-ci permet de prendre une vidéo sur déclenchement d'un capteur d'ouverture de l'envoyer sur telegram puis d'uploader le fichier sur google-drive
+
+```
 - alias: 'Prendre une video camera jardin'
   id: '1640957225913' 
   trigger:
@@ -126,4 +125,4 @@ de l'envoyer sur telegram puis d'uploader le fichier sur google-drive
               caption: Vidéo - Mouvement jardin détecté - {{now().strftime('%H:%M %d-%m-%Y')}}
               timeout: 180
     - service: shell_command.sauvegarde_google_drive_videos  
-'''
+```
