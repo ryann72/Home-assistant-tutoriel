@@ -107,3 +107,8 @@ Je n'assure pas le support de tous les problèmes mais je serais là si besoin s
 Si tout fonctionne, remercie-moi.
 
 Yann RITTER
+
+# Remerciement 
+Si vous aimez mes tutos, likez 🌟 mon repo !
+
+Si vous souhaitez m'offrir une petite bière ou un café ou participer à l'investissement materiel :  https://www.paypal.com/paypalme/YannRitter  Merci !
