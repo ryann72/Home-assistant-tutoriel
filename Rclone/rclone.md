@@ -18,7 +18,7 @@ Je ne suis pas le DEV des intégrations nécessaires.Je souhaite juste vous aide
 
 Choisir le cloud sur lequel sauvegarder vos données.
 
-La liste des clouds compatibles avec la solution proposé est disponible ici, il y en a une quarantaine : https://rclone.org/
+La liste des clouds compatibles avec la solution proposée est disponible ici, il y en a une quarantaine : https://rclone.org/
 
 
 ## Mise en place 
