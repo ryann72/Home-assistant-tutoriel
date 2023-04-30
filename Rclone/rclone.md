@@ -1,4 +1,4 @@
-# Tutoriel sauvegarde cloud
+Un# Tutoriel sauvegarde cloud
 Yann RITTER Tuto Home Assistant 
 
 Utilisation de rclone pour permettre la sauvegarde cloud de n'importe quel fichier home assistant.
@@ -44,7 +44,7 @@ Je vous propose donc ma solution.
 Créer un fichier nommé par exemple : rclonePhotos.sh
 Le placer à la racine du dossier /config/ de home-assistant puis coller les élements suivants
 
-'''
+```
 #permets d'installer rclone
 apk add rclone
 #permets de copier la config
@@ -54,7 +54,7 @@ cp /config/rclone.conf /root/.config/rclone/rclone.conf
 rclone sync "${1}" "${2}"
 #Purge du dossier local pour les fichiers de plus de 7 jours
 find "${1}" -depth -mindepth 1 -mtime +7 -delete
-'''
+```
 
 
 Copier le fichier rclone.conf, dans mon cas généré depuis windows dans le dossier config/ de home-assistant
